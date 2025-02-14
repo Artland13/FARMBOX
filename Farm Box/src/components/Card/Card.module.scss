@@ -1,0 +1,76 @@
+.root {
+  width: 100%;
+  background: var(--var-gray);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding-bottom: 5px;
+
+  .container__img {
+    width: 100%;
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sales {
+      background-color: var(--var-green);
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      max-width: calc(100% - 20px);
+
+      .sales__text {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+  }
+
+  .price {
+    margin: 0px 0 5px 10px;
+    font-size: 18px;
+    background-color: var(--var-green);
+    height: max-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    max-width: max-content;
+    width: 100%;
+  }
+
+  .price_with_sales {
+    margin: 5px 0 10px 10px;
+    font-size: 18px;
+    white-space: nowrap;
+
+    .price_with_sales__text {
+      background-color: var(--var-green);
+      height: max-content;
+      padding: 5px 10px;
+      border-radius: 20px;
+      max-width: max-content;
+      width: 100%;
+    }
+
+    .price_with_sales__span {
+      color: var(--var-text-second);
+      text-decoration: line-through;
+      margin-left: 10px;
+    }
+  }
+
+  .title {
+    margin-left: 10px;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+.root {
+    .products {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(5, calc((100% - 80px) / 5));
+      width: 100%;
+  
+      @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(4, calc((100% - 60px) / 4));
+        padding: 0 auto;
+      }
+  
+      @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(3, calc((100% - 40px) / 3));
+      }
+  
+      @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(2, calc((100% - 20px) / 2));
+      }
+  
+      @media screen and (max-width: 350px) {
+        grid-template-columns: repeat(1, calc((100%) / 1));
+      }
+    }
+  }
+  

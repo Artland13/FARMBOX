@@ -1,0 +1,115 @@
+.root {
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  max-width: 320px;
+  height: 100vh;
+  border-left: solid 1px var(--var-green);
+  background-color: var(--var-body-bg);
+  border-radius: 20px 0 0 20px;
+  padding: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  animation: animationMenu 0.6s linear;
+
+  .header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--var-green);
+    padding-bottom: 20px;
+    width: 100%;
+
+    .exitMenu {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .content {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    .orders__user {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 20px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      height: 60px;
+      width: 100%;
+      border-radius: 20px;
+      border: solid 2px var(--var-green);
+
+      > p {
+        margin-left: 10px;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: var(--var-green);
+      }
+
+      .ordersIcon {
+        width: 40px;
+        height: 40px;
+        margin-left: 14px;
+      }
+
+      .userIcon {
+        width: 40px;
+        height: 40px;
+        margin-left: 11px;
+      }
+    }
+  }
+
+  .signContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-direction: column;
+    width: 100%;
+
+    .sign {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes animationMenu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

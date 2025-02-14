@@ -1,0 +1,82 @@
+.root {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  width: 100%;
+
+  .avatar__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .separator {
+      width: 2px;
+      height: 100%;
+      background-color: var(--var-body-bg);
+    }
+  }
+
+  .input__container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+
+    @media screen and (max-width: 520px) {
+      text-align: center;
+    }
+
+    .secondText {
+      color: var(--var-text-second);
+    }
+
+    .input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      background: var(--var-body-bg);
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid var(--var-gray);
+      transition: border-color 0.5s ease;
+
+      &:hover {
+        border-color: var(--var-green);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--var-green);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: end;
+      margin-top: 5px;
+
+      @media screen and (max-width: 520px) {
+        flex-direction: column;
+        > div {
+          width: 100%;
+        }
+      }
+    }
+
+    .error {
+      color: red;
+      text-align: end;
+      font-size: 18px;
+    }
+  }
+}

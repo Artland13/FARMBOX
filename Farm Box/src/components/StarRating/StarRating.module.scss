@@ -1,0 +1,25 @@
+.stars {
+  display: flex;
+  align-items: center;
+  > p {
+    font-size: 18px;
+    margin-left: 10px;
+    color: var(--var-green);
+  }
+
+  .star {
+    fill: var(--var-body-bg);
+
+    > path {
+      stroke: var(--var-green);
+    }
+  }
+
+  .starHover {
+    fill: var(--var-text-second);
+  }
+
+  .starActive {
+    fill: var(--var-green);
+  }
+}

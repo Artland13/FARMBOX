@@ -1,0 +1,139 @@
+.root {
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+
+  .positionButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px var(--var-green) solid;
+    border-radius: 20px;
+    height: 60px;
+    padding: 0 10px 0 10px;
+    background-color: var(--var-body-bg);
+    width: 100%;
+
+    .positionText {
+      font-size: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .positionDropDownIcon {
+      transition-duration: 0.5s;
+    }
+  }
+
+  .positionDropDown {
+    width: 250px;
+    position: absolute;
+    top: 65px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px gray;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    overflow: hidden;
+    animation: 0.25s linear;
+    animation-name: animationAppearance;
+    background-color: var(--var-body-bg);
+    z-index: 3;
+
+    .addPositionContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 10px 0 10px;
+
+      .addPositionIcon {
+        font-size: 30px;
+        margin-top: 2px;
+      }
+    }
+
+    .adressContainer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+
+      .adressText {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      &:hover {
+        background-color: gray;
+      }
+
+      .adressCheck {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.Header {
+  max-width: 264px;
+
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+
+  .positionText {
+    width: 100%;
+  }
+
+  .positionIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .positionDropDownIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}
+
+.Menu {
+  display: none;
+
+  @media screen and (max-width: 750px) {
+    display: block;
+  }
+
+  .positionButton {
+    justify-content: space-between;
+
+    .positionIconText {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .positionIcon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .positionDropDownIcon {
+      width: 20px;
+      height: 20px;
+      margin-right: 0px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.root {
+  padding: 20px;
+  gap: 20px;
+  background-color: var(--var-gray);
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+
+  .img {
+    width: 80px;
+    height: 80px;
+
+    @media screen and (max-width: 470px) {
+      display: none;
+    }
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @media screen and (max-width: 750px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .title {
+        font-size: 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: clamp(300px, 50vw, 450px);
+        width: 100%;
+      }
+
+      .date {
+        font-size: 14px;
+        color: var(--var-text-second);
+      }
+    }
+
+    .question {
+      font-size: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: 700;
+    }
+
+    .username {
+      font-size: 14px;
+      color: var(--var-text-second);
+    }
+
+    .like__option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .rateButtons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .rateButton {
+          padding: 10px;
+          border-radius: 10px;
+          background-color: var(--var-body-bg);
+          transition:
+            background-color 0.5s ease,
+            transform 0.5s ease;
+
+          &:hover {
+            background-color: var(--var-bg-second);
+            transform: translateY(-2px);
+          }
+
+          .rateButton__text {
+            font-size: 17px;
+          }
+        }
+      }
+
+      .optionButtons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .optionButton__answer {
+          color: var(--var-text);
+          font-size: 18px;
+          padding: 10px;
+          border-radius: 10px;
+          background-color: var(--var-body-bg);
+          transition:
+            background-color 0.5s ease,
+            transform 0.5s ease;
+
+          &:hover {
+            background-color: var(--var-bg-second);
+            transform: translateY(-2px);
+          }
+        }
+
+        .optionButton__delete {
+          padding: 2px;
+          border-radius: 10px;
+          transition: transform 0.5s ease;
+
+          .svg__delete {
+            width: 25px;
+            height: 25px;
+            transition:
+              width 0.5s ease,
+              height 0.5s ease;
+
+            > path {
+              stroke: var(--var-green);
+              transition: stroke 0.5s ease;
+            }
+          }
+
+          &:hover {
+            transform: translateY(-2px);
+
+            > svg {
+              width: 30px;
+              height: 30px;
+
+              > path {
+                stroke: var(--var-text);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .warningText {
+    margin-top: 5px;
+    color: red;
+    text-align: end;
+  }
+}

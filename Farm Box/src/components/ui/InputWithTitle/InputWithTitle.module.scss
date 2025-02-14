@@ -1,0 +1,26 @@
+.root {
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: -10px;
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input {
+    width: 100%;
+    margin-top: 6px;
+    border-radius: 20px;
+    min-height: 32px;
+    background: var(--var-bg);
+    border: 2px solid var(--var-green);
+    padding-left: 10px;
+    transition: 0.4s ease all;
+
+    &:focus {
+      border: 2px solid var(--var-text);
+      transition: 0.4s ease all;
+      outline: none;
+    }
+  }
+}

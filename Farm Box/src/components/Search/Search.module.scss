@@ -1,0 +1,89 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px var(--var-green) solid;
+  border-radius: 20px;
+  height: 60px;
+  padding: 0 10px 0 10px;
+  position: relative;
+
+  .searchIcon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .searchInput {
+    height: 30px;
+    border: 0;
+    font-size: 20px;
+    background-color: var(--var-body-bg);
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .searchDropDown {
+    width: 300px;
+    position: absolute;
+    top: 65px;
+    background-color: var(--var-body-bg);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px gray;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: animationAppearance 0.25s linear;
+    background-color: var(--var-body-bg);
+    z-index: 3;
+
+    .dropDownTool {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      padding: 5px;
+      padding: 10px 0 10px 10px;
+      width: 100%;
+
+      & > p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover {
+        background-color: gray;
+      }
+
+      .dropDownIcon {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.Header {
+  width: 264px;
+
+  .searchInput {
+    width: 200px;
+  }
+}
+
+.Menu {
+  width: 100%;
+  display: none;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}

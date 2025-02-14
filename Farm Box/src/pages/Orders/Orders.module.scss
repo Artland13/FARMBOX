@@ -1,0 +1,107 @@
+.root {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: 1035px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .mainContainer {
+    border: 1px solid var(--var-green);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    max-width: 66%;
+    width: 100%;
+
+    @media screen and (max-width: 1035px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 450px) {
+      max-height: none;
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
+
+  .payContainer {
+    border: 1px solid var(--var-green);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    min-width: 350px;
+    height: max-content;
+    position: sticky;
+    top: 120px;
+    width: 100%;
+    max-width: 32%;
+
+    @media screen and (max-width: 1035px) {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      position: static;
+    }
+
+    @media screen and (max-width: 400px) {
+      min-width: 10px;
+    }
+
+    .priceContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 18px;
+    }
+  }
+}
+
+.title {
+  font-size: 32px;
+}
+
+.recContainer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  // .recomendet {
+  //   display: grid;
+  //   gap: 20px;
+  //   grid-template-columns: repeat(5, 1fr);
+  //   width: 100%;
+  //   max-width: 1200px;
+  //   margin: 20px auto;
+
+  //   @media screen and (max-width: 900px) {
+  //     grid-template-columns: repeat(4, 1fr);
+  //   }
+
+  //   @media screen and (max-width: 700px) {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+
+  //   @media screen and (max-width: 500px) {
+  //     grid-template-columns: repeat(2, 1fr);
+  //   }
+
+  //   @media screen and (max-width: 350px) {
+  //     grid-template-columns: repeat(1, 1fr);
+  //   }
+  // }
+}

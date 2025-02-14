@@ -1,0 +1,127 @@
+.root {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  width: 100%;
+
+  .avatar__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .separator {
+      width: 2px;
+      height: 100%;
+      background-color: var(--var-body-bg);
+    }
+  }
+
+  .info__container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .users {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .username {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .secondText {
+      color: var(--var-text-second);
+    }
+
+    .text {
+      font-size: 18px;
+    }
+
+    .error {
+      color: red;
+      text-align: end;
+      font-size: 18px;
+    }
+
+    .like__dislike__option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .rateButtons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .rateButton {
+          padding: 10px;
+          border-radius: 10px;
+          background-color: var(--var-body-bg);
+          transition:
+            border-color 0.5s ease,
+            transform 0.5s ease;
+
+          &:hover {
+            background-color: var(--var-bg-second);
+            transform: translateY(-2px);
+          }
+
+          .rateButton__text {
+            font-size: 17px;
+          }
+        }
+      }
+
+      .optionButton__delete {
+        padding: 2px;
+        border-radius: 10px;
+        transition: transform 0.5s ease;
+
+        .svg__delete {
+          width: 25px;
+          height: 25px;
+          transition:
+            width 0.5s ease,
+            height 0.5s ease;
+
+          > path {
+            transition: stroke 0.5s ease;
+            stroke: var(--var-green);
+          }
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+
+          > svg {
+            width: 30px;
+            height: 30px;
+
+            > path {
+              stroke: var(--var-text);
+            }
+          }
+        }
+      }
+    }
+  }
+}

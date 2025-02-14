@@ -1,0 +1,262 @@
+.root {
+  width: 100%;
+  max-height: 150px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--var-gray);
+  border-radius: 20px;
+
+  @media screen and (max-width: 600px) {
+    max-height: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+
+  .checkbox_img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .checkbox[type='checkbox'] {
+      // -webkit-appearance: none;
+      // -moz-appearance: none;
+      // appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--var-green);
+      //transition: all 0.3s;
+      //background-color: var(--var-body-bg);
+    }
+
+    // .checkbox[type="checkbox"]:checked {
+    //   background-color: var(--var-green);
+    //   border-color: var(--var-green);
+    // }
+
+    .preview {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 100%;
+      width: 35%;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .description {
+        width: 100%;
+        font-size: 20px;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-word;
+
+        @media screen and (max-width: 600px) {
+          -webkit-line-clamp: 4;
+          text-align: center;
+        }
+      }
+
+      .sales {
+        background-color: var(--var-green);
+        padding: 5px;
+        border-radius: 5px;
+        max-width: max-content;
+
+        .sales__text {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .price {
+      margin: 5px 0 5px 10px;
+      font-size: 18px;
+      background-color: var(--var-green);
+      height: max-content;
+      padding: 10px;
+      border-radius: 20px;
+      width: max-content;
+
+      @media screen and (max-width: 600px) {
+        margin: 0 auto;
+        gap: 10px;
+        white-space: nowrap;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+    }
+
+    .priceLater {
+      margin: 5px 0 5px 10px;
+      font-size: 18px;
+      white-space: nowrap;
+
+      @media screen and (max-width: 660px) {
+        white-space: normal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 600px) {
+        text-align: center;
+        gap: 10px;
+        white-space: nowrap;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+
+      .priceLater__text {
+        background-color: var(--var-green);
+        height: max-content;
+        padding: 5px 10px;
+        border-radius: 20px;
+        width: max-content;
+      }
+
+      .priceLater__span {
+        color: var(--var-text-second);
+        text-decoration: line-through;
+        margin-left: 10px;
+      }
+    }
+
+    .container__options {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .trashIcon {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: -10px;
+        right: -5px;
+        cursor: pointer;
+        border-radius: 8px;
+        stroke: var(--var-text);
+
+        @media screen and (max-width: 600px) {
+          position: static;
+        }
+
+        &:hover {
+          background-color: var(--var-text-second);
+          stroke: var(--var-body-bg);
+        }
+      }
+
+      .counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        position: relative;
+        right: -10px;
+        bottom: -15px;
+
+        @media screen and (max-width: 600px) {
+          position: static;
+        }
+
+        .counter__button {
+          background: none;
+          color: var(--var-text);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          border-radius: 10px;
+          fill: var(--var-text);
+
+          & > svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:hover {
+            background: var(--var-text-second);
+
+            svg > path {
+              fill: var(--var-body-bg);
+            }
+          }
+        }
+
+        .disabled {
+          fill: var(--var-green);
+
+          &:hover {
+            fill: var(--var-green);
+            background: none;
+
+            svg > path {
+              fill: var(--var-green);
+            }
+          }
+        }
+
+        .counter__input {
+          background: none;
+          color: var(--var-text);
+          width: 50px;
+          font-size: 18px;
+          border-radius: 10px;
+          padding: 5px;
+          border: 2px solid var(--var-green);
+          text-align: center;
+
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
